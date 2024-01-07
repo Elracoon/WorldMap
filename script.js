@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const japan = document.querySelectorAll('.Japan')
     const norway = document.querySelectorAll('.Norway')
     const australia = document.querySelectorAll('.Australia')
+    const denmark = document.querySelectorAll('.Denmark')
 
     function addHoverEffect(elements, className) {
         elements.forEach(function (element) {
@@ -43,5 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     addHoverEffect(canada, 'hovered');
     addHoverEffect(japan, 'hovered');
     addHoverEffect(norway, 'hovered');
-    addHoverEffect(australia, 'hovered')
+    addHoverEffect(australia, 'hovered');
+    addHoverEffect(denmark, 'hovered')
 })
