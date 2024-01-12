@@ -2,11 +2,11 @@ svg {
     width: 100%;
 }
 
-.Canada, .Japan, .Norway, .Australia, .Denmark {
+.Canada, .Japan, .Norway, .Australia, .Denmark, .Angola {
     transition: fill 0.3s;
 }
 
-.Canada.hovered, .Japan.hovered, .Norway.hovered, .Australia.hovered, .Denmark.hovered {
+.Canada.hovered, .Japan.hovered, .Norway.hovered, .Australia.hovered, .Denmark.hovered, .Angola.hovered {
     fill: #000dff;
     cursor: pointer;
 }

@@ -4,10 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const norway = document.querySelectorAll('.Norway')
     const australia = document.querySelectorAll('.Australia')
     const denmark = document.querySelectorAll('.Denmark')
+    const angola = document.querySelectorAll('.Angola')
 
     function addHoverEffect(elements, className) {
         elements.forEach(function (element) {
-            var clicked = false;
+            let clicked = false;
 
             element.addEventListener('mouseover', function () {
                 if (!clicked) {
@@ -46,4 +47,5 @@ document.addEventListener('DOMContentLoaded', function () {
     addHoverEffect(norway, 'hovered');
     addHoverEffect(australia, 'hovered');
     addHoverEffect(denmark, 'hovered')
+    addHoverEffect(angola, 'hovered')
 })
