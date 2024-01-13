@@ -2,11 +2,11 @@ svg {
     width: 100%;
 }
 
-.Canada, .Japan, .Norway, .Australia, .Denmark, .Angola, .Azerbaijan, .France, .Turkey, .Philippines, .Oman{
+.Canada, .Japan, .Norway, .Australia, .Denmark, .Angola, .Azerbaijan, .France, .Turkey, .Philippines, .Oman, .Malaysia{
     transition: fill 0.3s;
 }
 
-.Canada.hovered, .Japan.hovered, .Norway.hovered, .Australia.hovered, .Denmark.hovered, .Angola.hovered, .Azerbaijan.hovered, .France.hovered, .Turkey.hovered, .Philippines.hovered, .Oman.hovered{
+.Canada.hovered, .Japan.hovered, .Norway.hovered, .Australia.hovered, .Denmark.hovered, .Angola.hovered, .Azerbaijan.hovered, .France.hovered, .Turkey.hovered, .Philippines.hovered, .Oman.hovered. .Malaysia.hovered{
     fill: #000dff;
     cursor: pointer;
 }
