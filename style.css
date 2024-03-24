@@ -1,3 +1,7 @@
 svg {
     width: 100%;
 }
+
+#country-info {
+    text-align: center;
+}
