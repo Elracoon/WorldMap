@@ -1,32 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
     const paths = document.querySelectorAll('.world-map path');
+    const hoverColorInput = document.getElementById('hover-color');
+    let hoverColor = hoverColorInput.value;
+
+    function updateHoverColor(path) {
+        path.style.fill = hoverColor;
+    }
+
+    hoverColorInput.addEventListener('input', function() {
+        hoverColor = hoverColorInput.value;
+    });
 
     paths.forEach(path => {
+        const defaultColor = path.style.fill; // stocker la couleur de remplissage par défaut
+
         path.addEventListener('mouseenter', function () {
-            this.style.fill = '#ff0000';
-            const countryName = this.getAttribute('name');
-            const countryClass = this.getAttribute('class');
+            updateHoverColor(path);
+            const countryName = path.getAttribute('name');
+            const countryClass = path.getAttribute('class');
             showCountryInfo(countryName, countryClass);
         });
 
         path.addEventListener('mouseleave', function () {
-            this.style.fill = '#ececec';
+            path.style.fill = defaultColor; // restaurer la couleur de remplissage par défaut
             hideCountryInfo();
         });
     });
-});
 
-function showCountryInfo(name, className) {
-    const tooltip = document.getElementById('country-info');
-    if (name) {
-        tooltip.textContent = name;
-    } else if (className) {
-        tooltip.textContent = className;
+    function showCountryInfo(name, className) {
+        const tooltip = document.getElementById('country-info');
+        if (name) {
+            tooltip.textContent = name;
+        } else if (className) {
+            tooltip.textContent = className;
+        }
+        tooltip.style.display = 'block';
     }
-    tooltip.style.display = 'block';
-}
 
-function hideCountryInfo() {
-    const tooltip = document.getElementById('country-info');
-    tooltip.style.display = 'none';
-}
+    function hideCountryInfo() {
+        const tooltip = document.getElementById('country-info');
+        tooltip.style.display = 'none';
+    }
+});
