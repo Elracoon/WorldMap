@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     paths.forEach(path => {
-        const defaultColor = path.style.fill; // stocker la couleur de remplissage par défaut
+        const defaultColor = path.style.fill;
 
         path.addEventListener('mouseenter', function () {
             updateHoverColor(path);
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         path.addEventListener('mouseleave', function () {
-            path.style.fill = defaultColor; // restaurer la couleur de remplissage par défaut
+            path.style.fill = defaultColor;
             hideCountryInfo();
         });
     });
@@ -39,6 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function hideCountryInfo() {
         const tooltip = document.getElementById('country-info');
-        tooltip.style.display = 'none';
+        tooltip.textContent = '';
     }
 });
