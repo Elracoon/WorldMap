@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 svg {
@@ -28,4 +29,8 @@ svg {
 #country-info {
     width: 50%;
     text-align: center;
+}
+
+button {
+    transition: background-color 0.5s ease, color 0.5s ease;
 }

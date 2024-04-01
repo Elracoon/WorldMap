@@ -42,3 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.textContent = '';
     }
 });
+
+function darkMode() {
+    const body = document.body;
+    const darkModeButton = document.getElementById('map-mode');
+
+    if (body.style.background === 'black') {
+        body.style.background = 'white';
+        body.style.color = 'black';
+        darkModeButton.value = 'Dark';
+    } else {
+        body.style.background = 'black';
+        body.style.color = 'white';
+        darkModeButton.value = 'Light';
+    }
+}
